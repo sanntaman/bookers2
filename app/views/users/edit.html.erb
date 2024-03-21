@@ -1,0 +1,16 @@
+<% if @user.errors.any? %>
+  <%= @user.errors.count %>errors prohibited this obj from being saved:
+  <ul>
+    <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+
+<%= form_with(model: @user) do |form| %>
+  <%= form.text_field :name %>
+   <%= form.file_field 'user[image]', accept: 'image/*' %>
+  <%= form.text_area :introduction %>
+  <%= form.submit '更新する' %>
+<% end %>
