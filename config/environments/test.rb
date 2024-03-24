@@ -58,8 +58,8 @@ Rails.application.configure do
 
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
-  config.middleware.delete "Rack::MiniProfiler"
-  config.after_initialize do
-  Rack::MiniProfiler.config.enabled = false
-  end
+  # config.middleware.delete "Rack::MiniProfiler"
+  # config.after_initialize do
+  # Rack::MiniProfiler.config.enabled = false
+  # end
 end

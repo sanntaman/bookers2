@@ -10,7 +10,7 @@
 
 <%= form_with(model: @user) do |form| %>
   <%= form.text_field :name %>
-   <%= form.file_field 'user[image]', accept: 'image/*' %>
+   <%= form.file_field :profile_image, accept: 'image/*' %>
   <%= form.text_area :introduction %>
-  <%= form.submit '更新する' %>
+  <%= form.submit 'Update User' %>
 <% end %>

@@ -16,12 +16,7 @@
     <tr>
       <td>
         <%= link_to  user_path(book.user) do %>
-          <% if @user.image.attached? %>
-            <%= image_tag user.image, size: "100x100" %>
-          <% else %>
-            <%= image_tag 'no_image', size: "100x100" %>
-            
-          <% end %>
+          <%= image_tag @user.get_profile_image(100,100) %>
         <% end %>
       </td>
       <td>
